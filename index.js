@@ -39,7 +39,6 @@ export default (type, message, timeout = 5000) => {
     parentToasts = parentToasts || createParentToasts()
     parentToasts.insertBefore(toast, parentToasts.firstChild)
     moveToasts('add')
-
     setTimeout(() => {
       toast.classList.add('active')
       removeMaxToast()
