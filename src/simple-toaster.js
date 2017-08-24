@@ -29,7 +29,7 @@ export default (type, message, timeout = 5000) => {
     toast.classList.add('toast', type)
     toast.innerHTML = message
 
-    parentToasts = document.getElementById('toast-notifications')
+    parentToasts = document.getElementById('simple-toaster')
     parentToasts.insertBefore(toast, parentToasts.firstChild)
     moveToasts('add')
 

@@ -2,7 +2,7 @@
   "name": "simple-toaster",
   "version": "1.0.0",
   "description": "Simple toaster - an elegant and simple notification for javascript, with no dependencies",
-  "main": "./dist/simple-toaster.min.js",
+  "main": "./src/simple-toaster.js",
   "scripts": {
     "build-sass": "node-sass src/simple-toaster.sass dist/simple-toaster.min.css --output-style=compressed",
     "build-js": "babel src/simple-toaster.js --out-file dist/simple-toaster.min.js --presets=es2015,babili",
