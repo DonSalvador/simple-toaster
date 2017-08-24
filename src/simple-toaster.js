@@ -7,7 +7,7 @@ function createParentToasts () {
   return container
 }
 
-export default function (type, message, timeout = 5000) {
+export default (type, message, timeout = 5000) => {
   let timer = false
   let maxToasts = 5
   function remove (el) {

@@ -22,7 +22,7 @@ npm i simple-toaster
 ```
 
 ```javascript
-import SimpleToaster from "simple-toaster" // or 'simple-toaster/dist/simple-toaster.min.js'
+import SimpleToaster from "simple-toaster"
 
 SimpleToaster('success', 'Hello Toaster!')
 ```

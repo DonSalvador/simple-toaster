@@ -1,8 +1,8 @@
 {
   "name": "simple-toaster",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Simple toaster - an elegant and simple notification for javascript, with no dependencies",
-  "main": "./src/simple-toaster.js",
+  "main": "./dist/simple-toaster.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SalvatoreDuran/simple-toaster.git"
