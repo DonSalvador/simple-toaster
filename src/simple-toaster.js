@@ -7,7 +7,7 @@ export default (type, message, timeout = 5000) => {
     el.classList.remove('active')
     moveToasts()
     setTimeout(() => {
-      el.parentNode.removeChild(el)
+      if (el.parentNode) el.parentNode.removeChild(el)
     }, 1000)
   }
   function moveToasts (type) {
