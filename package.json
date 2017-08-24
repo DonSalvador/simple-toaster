@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "Simple toaster - an elegant and simple notification for javascript, with no dependencies",
   "main": "./src/simple-toaster.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalvatoreDuran/simple-toaster.git"
+  },
   "scripts": {
     "build-sass": "node-sass src/simple-toaster.sass dist/simple-toaster.min.css --output-style=compressed",
     "build-js": "babel src/simple-toaster.js --out-file dist/simple-toaster.min.js --presets=es2015,babili",
@@ -17,9 +21,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaredreich/notie/issues"
+    "url": "https://github.com/salvatore-duran/simple-toaster/issues"
   },
-  "homepage": "https://jaredreich.com/notie",
+  "homepage": "",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-babili": "^0.1.4",
