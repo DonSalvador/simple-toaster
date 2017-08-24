@@ -1,6 +1,6 @@
 {
   "name": "simple-toaster",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple toaster - an elegant and simple notification for javascript, with no dependencies",
   "main": "./src/simple-toaster.js",
   "scripts": {
