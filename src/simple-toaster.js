@@ -1,6 +1,14 @@
+let parentToasts = false
+
+function createParentToasts () {
+  let container = document.createElement('div')
+  container.id = 'simple-toaster'
+  document.body.appendChild(container)
+  return container
+}
+
 export default (type, message, timeout = 5000) => {
   let timer = false
-  let parentToasts = false
   let maxToasts = 5
   function remove (el) {
     clearTimeout(timer)
@@ -28,8 +36,7 @@ export default (type, message, timeout = 5000) => {
     let toast = document.createElement('div')
     toast.classList.add('toast', type)
     toast.innerHTML = message
-
-    parentToasts = document.getElementById('simple-toaster')
+    parentToasts = parentToasts || createParentToasts()
     parentToasts.insertBefore(toast, parentToasts.firstChild)
     moveToasts('add')
 
