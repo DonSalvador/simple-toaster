@@ -2,14 +2,14 @@
   "name": "simple-toaster",
   "version": "1.0.4",
   "description": "Simple toaster - an elegant and simple notification for javascript, with no dependencies",
-  "main": "./src/simple-toaster.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SalvatoreDuran/simple-toaster.git"
   },
   "scripts": {
-    "build-sass": "node-sass src/simple-toaster.sass dist/simple-toaster.min.css --output-style=compressed",
-    "build-js": "babel src/simple-toaster.js --out-file dist/simple-toaster.min.js --presets=es2015,babili",
+    "build-sass": "node-sass index.sass dist/simple-toaster.min.css --output-style=compressed",
+    "build-js": "babel index.js --out-file dist/simple-toaster.min.js --presets=es2015,babili",
     "build": "yarn run build-sass && yarn run build-js"
   },
   "author": "Salvatore Duran",
