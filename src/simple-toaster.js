@@ -20,7 +20,7 @@ export default (type, message, timeout = 5000) => {
       if (el.parentNode) el.parentNode.removeChild(el)
     }, 1000)
   }
-  function moveToasts (type) {
+  function moveToasts(type) {
     let activeToasts = parentToasts.getElementsByClassName('active')
     for (let i = 0; i < activeToasts.length; i++) {
       let size = type === 'add' ? i + 1 : i
@@ -40,16 +40,14 @@ export default (type, message, timeout = 5000) => {
     parentToasts = parentToasts || createParentToasts()
     parentToasts.insertBefore(toast, parentToasts.firstChild)
     moveToasts('add')
-    setTimeout(() => {
-      toast.classList.add('active')
-      activeToastsAmount++
-      removeMaxToast()
-      if (timeout) {
-        timer = setTimeout(() => {
-          remove(toast)
-        }, timeout)
-      }
-    }, 50)
+    toast.classList.add('active')
+    activeToastsAmount++
+    removeMaxToast()
+    if (timeout) {
+      timer = setTimeout(() => {
+        remove(toast)
+      }, timeout)
+    }
     toast.onclick = ({target}) => {
       remove(target)
     }
