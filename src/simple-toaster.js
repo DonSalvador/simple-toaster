@@ -1,5 +1,6 @@
 let parentToasts = false
 let maxToasts = 5
+let activeToastsAmount = 0
 
 function createParentToasts () {
   let container = document.createElement('div')
@@ -13,6 +14,7 @@ export default (type, message, timeout = 5000) => {
   function remove (el) {
     clearTimeout(timer)
     el.classList.remove('active')
+    activeToastsAmount--
     moveToasts()
     setTimeout(() => {
       if (el.parentNode) el.parentNode.removeChild(el)
@@ -27,8 +29,7 @@ export default (type, message, timeout = 5000) => {
   }
   function removeMaxToast () {
     let activeToasts = parentToasts.getElementsByClassName('active')
-    let activeAmount = activeToasts.length
-    if (activeAmount > maxToasts) {
+    if (activeToastsAmount > maxToasts) {
       remove(activeToasts[activeAmount - 1])
     }
   }
@@ -41,6 +42,7 @@ export default (type, message, timeout = 5000) => {
     moveToasts('add')
     setTimeout(() => {
       toast.classList.add('active')
+      activeToastsAmount++
       removeMaxToast()
       if (timeout) {
         timer = setTimeout(() => {
