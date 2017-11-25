@@ -1,4 +1,5 @@
 let parentToasts = false
+let maxToasts = 5
 
 function createParentToasts () {
   let container = document.createElement('div')
@@ -9,7 +10,6 @@ function createParentToasts () {
 
 export default (type, message, timeout = 5000) => {
   let timer = false
-  let maxToasts = 5
   function remove (el) {
     clearTimeout(timer)
     el.classList.remove('active')
