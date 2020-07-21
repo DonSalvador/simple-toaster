@@ -39,5 +39,5 @@ simpleToaster(
 Import the style
 
 ```javascript
-@import ~simple-toaster/src/simple-toaster // or 'simple-toaster/dist/simple-toaster.min.css'
+@import ~simple-toaster/src/simple-toaster // or '~simple-toaster/dist/simple-toaster.min.css'
 ```
